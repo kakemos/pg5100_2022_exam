@@ -1,10 +1,12 @@
 ## How to use  
-### Open Docker and start in the terminal
+<ins>**Open Docker before starting in the terminal**</ins>  
 Start by directing to the project files. Then continue:
 - ``` cd src/main/resources/docker ```
 - ``` docker compose up -d ```
 
-### Continue in (for example) Postman
+<br>
+
+<ins>**Continue in (for example) Postman**</ins>  
 Log in with a POST-request to http://localhost:8080/login.  
 *These two users are available to use, or you can register and use your own user.  
 All new users automatically get user-authority.*
@@ -12,9 +14,10 @@ email | password | authority
 -----|--------|-----------
 `user@user.com` | user | user
 `admin@admin.com` | admin | admin
-  
-  
-### Endpoints and how to use them
+
+<br>
+
+### All endpoints and how to use them
 *all endpoints start with http://localhost:8080*
 | endpoint                  | request | body in json                                                                                         | authorities allowed  | purpose                                                                                                                                                                            |
 |---------------------------|---------|------------------------------------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
