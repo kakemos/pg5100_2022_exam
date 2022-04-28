@@ -85,17 +85,6 @@ class AnimalServiceUnitTest {
         assert(animal.name == "Pepsi")
     }
 
-    /*
-    @Test
-    fun shouldDeleteAnimal() {
-        every { animalRepo.deleteById(any()) } answers {
-        }
-
-        val animal = animalService.deleteAnimal(1)
-        //assert(animal == emptyArray<>())
-    }
-    */
-
     @Test
     fun shouldAdoptAnimal() {
         every { animalRepo.getAnimalById(any()) } answers {
@@ -114,5 +103,16 @@ class AnimalServiceUnitTest {
         assert(animal.adopted == true)
         assert(animal.owner == userBob)
     }
+    
+    /*
+    @Test
+    fun shouldDeleteAnimal() {
+        every { animalRepo.deleteById(any()) } answers {
+        }
+
+        val animal = animalService.deleteAnimal(1)
+        //assert(animal == emptyArray<>())
+    }
+    */
 
 }
