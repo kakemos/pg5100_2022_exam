@@ -112,6 +112,4 @@ class AuthControllerUnitTest {
             .andExpect { content { contentType(APPLICATION_JSON) } }
             .andExpect { jsonPath("$.email") { value("bob@bob.com") } }
     }
-
-
 }
