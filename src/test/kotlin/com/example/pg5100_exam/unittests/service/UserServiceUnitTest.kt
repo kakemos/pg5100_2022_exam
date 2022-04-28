@@ -21,7 +21,6 @@ class UserServiceUnitTest {
 
     @Test
     fun shouldGetUsers() {
-        // mocking out responses from findAll() in getUsers()
         every { userRepo.findAll() } answers {
             mutableListOf(userJoe, userJim)
         }
@@ -33,13 +32,10 @@ class UserServiceUnitTest {
 
     @Test
     fun shouldRegisterNewUser() {
-        // mocking out responses from save() (doing this for all functions in registerUser())
         every { userRepo.save(any()) }  answers {
-            // returns whatever we pass to it
             firstArg()
         }
 
-        // mocking out responses from getByAuthorityName()
         every { authorityRepo.getByAuthorityName(any()) } answers {
             AuthorityEntity(authorityName = "USER")
         }
