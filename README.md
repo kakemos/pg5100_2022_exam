@@ -7,7 +7,7 @@ email | password | authority
 `user@user.com` | user | user
 `admin@admin.com` | admin | admin
 
-
+\
 ### Endpoints and how to use them
 *all endpoints start with http://localhost:8080*
 | endpoint                  | request | body in json                                                                                         | authorities allowed  | purpose                                                                                                                                                                            |
