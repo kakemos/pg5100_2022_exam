@@ -35,27 +35,6 @@ class AnimalService(
         return animalRepo.getByName(name)
     }
 
-    /*
-    fun loadAnimalByName(name: String?): AnimalEntity {
-        name?.let {
-            val animal = animalRepo.findByName(it)
-            return AnimalEntity(
-                animal?.id,
-                animal!!.name,
-                animal.type,
-                animal.breed,
-                animal.gender,
-                animal.age,
-                animal.adopted,
-                animal.created,
-                animal.enabled,
-                animal.owner
-            )
-        }
-        throw Exception("Error retrieving animal!")
-    }
-    */
-
     fun loadAnimalById(id: Long): AnimalEntity {
         return animalRepo.getById(id)
     }
@@ -88,8 +67,30 @@ class AnimalService(
         return animalRepo.save(animal)
     }
 
+    // for some reason I had to include this in the class
     override fun loadUserByUsername(username: String?): UserDetails {
         TODO("Not yet implemented")
     }
+    
+    /*
+    fun loadAnimalByName(name: String?): AnimalEntity {
+        name?.let {
+            val animal = animalRepo.findByName(it)
+            return AnimalEntity(
+                animal?.id,
+                animal!!.name,
+                animal.type,
+                animal.breed,
+                animal.gender,
+                animal.age,
+                animal.adopted,
+                animal.created,
+                animal.enabled,
+                animal.owner
+            )
+        }
+        throw Exception("Error retrieving animal!")
+    }
+    */
 
 }
