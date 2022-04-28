@@ -1,6 +1,6 @@
 ## How to use  
 <ins>**Open Docker before starting in the terminal**</ins>  
-Start by directing to the project files. Then continue:
+Start by directing to the project files in terminal. Then continue:
 - ``` cd src/main/resources/docker ```
 - ``` docker compose up -d ```
 
