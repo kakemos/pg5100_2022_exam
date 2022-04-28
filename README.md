@@ -1,7 +1,13 @@
-## How to use with (for example) Postman
+## How to use  
+### Open Docker and start in the terminal
+Start by directing to the project files. Then continue:
+- ``` cd src/main/resources/docker ```
+- ``` docker compose up -d ```
+
+### Continue in (for example) Postman
 Log in with a POST-request to http://localhost:8080/login.  
-These two users are available to use, or you can register and use your own user.  
-All new users automatically get user-authority.
+*These two users are available to use, or you can register and use your own user.  
+All new users automatically get user-authority.*
 email | password | authority
 -----|--------|-----------
 `user@user.com` | user | user
