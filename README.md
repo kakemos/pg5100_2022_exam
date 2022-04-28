@@ -1,36 +1,36 @@
 ## How to use  
-<ins>**Open Docker before starting in the terminal**</ins>  
-Start by directing to the project files in terminal. Then continue:
-- ``` cd src/main/resources/docker ```
-- ``` docker compose up -d ```
+**1. Open Docker before starting in the terminal**  
+  Start by directing to the project files in terminal. Then continue:
+  - ``` cd src/main/resources/docker ```
+  - ``` docker compose up -d ```
 
 <br>
 
-<ins>**Continue in (for example) Postman**</ins>  
-Log in with a POST-request to http://localhost:8080/login.  
-*These two users are available to use, or you can register and use your own user.  
-All new users automatically get user-authority.*
-email | password | authority
------|--------|-----------
-`user@user.com` | user | user
-`admin@admin.com` | admin | admin
+**2. Continue in (for example) Postman**  
+  Log in with a POST-request to http://localhost:8080/login.  
+  *These two users are available to use, or you can register and use your own user.  
+  All new users automatically get user-authority.*
+  email | password | authority
+  -----|--------|-----------
+  `user@user.com` | user | user
+  `admin@admin.com` | admin | admin
 
 <br>
 
 ### All endpoints and how to use them
 *all endpoints start with http://localhost:8080*
-| endpoint                  | request | body in json                                                                                         | authorities allowed  | purpose                                                                                                                                                                            |
+| endpoint                  | request | example body in json                                                                                         | authorities allowed  | purpose                                                                                                                                                                            |
 |---------------------------|---------|------------------------------------------------------------------------------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | /register                 | POST    | {<br> "email": "`newUser@user`",<br> "password": "password" <br>}                                    | all                  | register a user                                                                                                                                                                    |
 | /login                    | POST    | {<br>  "email": "`admin@admin.com`",<br> "password": "admin" <br>}                                   | all                  | login with username and password                                                                                                                                                   |
-| /user/1                   | GET     |                                                                                                      | admin, user          | show user <br>*(1 in endpoint referencing the userId, can be changed other existing id's)*                                                                                    |
+| /user/1                   | GET     |                                                                                                      | admin, user          | show user <br>*(1 in endpoint referencing the userId, can be changed other existing ids)*                                                                                    |
 | /user/all                 | GET     |                                                                                                      | admin, user          | show all users                                                                                                                                                                     |
 | /shelter/all-animals      | GET     |                                                                                                      | admin, user          | show all animals                                                                                                                                                                   |
-| /shelter/animal/1         | GET     |                                                                                                      | admin, user          | show one animal <br>*(1 in endpoint referencing animals id, can be changed to other existing id's)*                                                                            |
+| /shelter/animal/1         | GET     |                                                                                                      | admin, user          | show one animal <br>*(1 in endpoint referencing animal's id, can be changed to other existing ids)*                                                                            |
 | /shelter/register-animal  | POST    | {<br>	"name": "Horse",<br>	"type": "cow",<br>	"breed": "big",<br>	"gender": 1,<br>	"age": 5<br>}  | admin                | register a new animal                                                                                                                                                              |
-| /shelter/animal/1         | PUT     | {<br>	"name": "Pingu",<br>	"type": "dog",<br>	"breed": "cat",<br>	"gender": 1,<br>	"age": 12<br>} | admin                | update animal info of existing animal<br>*(1 in endpoint referencing animals id, can be changed to other existing id's)*                                                                   |
-| /shelter/animal/1         | DELETE  |                                                                                                      | admin                | delete an animal<br>*(1 in endpoint referencing animals id, can be changed to other existing id's)*                                                                            |
-| /shelter/animal/1/adopted | PUT     | 2                                                                                                    | admin                | mark an animal as adopted<br>*(1 in endpoint referencing animals id, can be changed to other existing id's)*<br>*(2 in body referencing new owners userId, can be changed to other existing id's)* |
+| /shelter/animal/1         | PUT     | {<br>	"name": "Pingu",<br>	"type": "dog",<br>	"breed": "cat",<br>	"gender": 1,<br>	"age": 12<br>} | admin                | update animal info of existing animal<br>*(1 in endpoint referencing animal's id, can be changed to other existing id's)*                                                                   |
+| /shelter/animal/1         | DELETE  |                                                                                                      | admin                | delete an animal<br>*(1 in endpoint referencing animal's id, can be changed to other existing id's)*                                                                            |
+| /shelter/animal/1/adopted | PUT     | 2                                                                                                    | admin                | mark an animal as adopted<br>*(1 in endpoint referencing animal's id, can be changed to other existing ids)*<br>*(2 in body referencing new owner's userId, can be changed to other existing ids)* |
 
 ---
 
