@@ -1,14 +1,14 @@
 ## How to use  
-**1. Open Docker before starting in the terminal**  
-  Start by directing to the project files in terminal. Then continue:
+**1. Open Docker before starting in the Command Line**  
+  Start by directing to the project files in command line. Then continue:
   - ``` cd src/main/resources/docker ```
   - ``` docker compose up -d ```
 
 <br>
 
-**2. Continue in (for example) Postman**  
+**2. Send HTTP-requests to the server in (for example) Postman**  
   Log in with a POST-request to http://localhost:8080/login.  
-  *These two users are available to use, or you can register and use your own user.  
+  *The two users below are available to use, or you can register a new user at http://localhost:8080/register.  
   All new users automatically get user-authority.*
   email | password | authority
   -----|--------|-----------
